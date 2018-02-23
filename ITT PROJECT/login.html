@@ -1,0 +1,126 @@
+<html>
+<head>
+<style>
+
+.container {
+  left: 50%;
+  position: fixed;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+#login-form {
+	width: 300px;
+}
+
+#login-form fieldset 
+{
+	background: #fff;
+	border-radius: 0 0 5px 5px;
+	padding: 20px;
+	position: relative;
+}
+
+#login-form fieldset:before 
+ {
+	background-color: #fff;
+	content: "";
+	height: 8px;
+	left: 50%;
+	margin: -4px 0 0 -4px;
+	position: relative;
+	top: 0;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	width: 8px;
+}
+
+#login-form input {
+	font-size: 20px;
+      height:55px;
+}
+
+#login-form input[type="submit"] {
+	background: #1dabb8;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font-weight: bold;
+	padding: 5px 20px;
+        margin-right:70px;
+        margin-top:15px;
+
+}
+
+#login-form h3 
+   {
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+        background-color:#000;
+}
+
+#login-form input[type="submit"]:hover { background: #199d98; }
+
+input {
+	font-family: inherit;
+	font-size: inherit;
+	margin: 0;
+	-webkit-appearance: none;
+      }
+
+input[type="submit"] { cursor: pointer; }
+
+a{
+	color:	 #bfbfbf;
+	font-size:20px;
+        text-decoration:none;
+	text-align: center;
+	width: 20px;
+}
+span
+{
+ color:darkblack;
+ font-size:20px;
+}
+ a:hover { color: #199d98; }
+
+</style>
+</head>
+<body>
+ <img src="images.jpg" />	
+<div class="container">
+
+  <div id="login-form">
+
+    <h3>Login</h3>
+     <form action="cgi-bin/2.py" method="post">
+    <fieldset>
+
+      
+        <input type="text" required name="username" value="User Name"  onBlur="if(this.value=='')this.value='User Name'" onFocus="if(this.value=='User Name')this.value='' "/> 
+        <br> 
+        <br>
+
+        <input type="password" required name="password" value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "/> 
+        <br>
+        
+        <input type="submit" value="Login"/>
+        </fieldset>
+        <br>
+          <p> <span> ? </span><a href="#">Forgot Password</a></p>
+        
+      </form>
+    
+  </div> 
+</div>
+</body>
+</html>
