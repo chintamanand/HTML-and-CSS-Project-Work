@@ -1,0 +1,186 @@
+<html>
+<head>
+<u>
+<h1 style="color:blue">CONVERT FROM ENGLISH TO PIG LATIN</h1>
+</u>
+</head>
+
+<body>
+
+<h2 style="color:lightgreen">ENTER PHRASE</h2>
+<textarea id="phrase" rows="4" cols="40"></textarea>
+<br/>
+<input type="button" onclick="myFunction()" name="b1" value="CONVERT TO PIG LATIN"></input>
+<br/>
+</br>
+<input type="button" onclick="myFunction1()" name="b2" value="CONVERT TO PIG LATIN"></input>
+<br/>
+</br>
+<input type="button" onclick="myFunction2()" name="b3" value="CONVERT TO PIG LATIN"></input>
+<br/>
+<h3 style="color:red">Pig Latin of above text is:</h3>
+<p id="DEMO"></p>
+<p id="DEMO1"></p>
+<p id="DEMO2"></p>
+<script type="text/javascript">
+function myFunction()
+{
+var s=document.getElementById("phrase").value;
+var s1=s.split(" ");
+var i=0;
+var len=s1.length;
+var s4="";
+ for (;i<len;)
+ { 
+   var len1=s1[i].length;
+   var s2=s1[i].substring(0,1);
+   var s5=s2.toLowerCase();
+   if(s5=="a")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"way";
+     i++;
+   }
+   else if(s5=="e")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"way";
+     i++;
+   }
+   else if(s5=="i")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"way";
+     i++;
+   }
+   else if(s5=="o")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"way";
+     i++;
+   }
+   else if(s5=="u")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"way";
+     i++;
+   }
+  else
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"ay";
+     i++;
+   }
+ }
+s4=s4+".";
+document.getElementById("DEMO").innerHTML=s4;
+}
+
+function myFunction1()
+{
+var s=document.getElementById("phrase").value;
+var s1=s.split(" ");
+var i=0;
+var len=s1.length;
+var s4="";
+ for (;i<len;)
+ { 
+   var len1=s1[i].length;
+   var s2=s1[i].substring(0,1);
+   var s5=s2.toLowerCase();
+   if(s5=="a")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"i";
+     i++;
+   }
+   else if(s5=="e")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"i";
+     i++;
+   }
+   else if(s5=="i")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s2+"i";
+     i++;
+   }
+   else if(s5=="o")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"i";
+     i++;
+   }
+   else if(s5=="u")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"i";
+     i++;
+   }
+  else
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"ay";
+     i++;
+   }
+ }
+s4=s4+".";
+document.getElementById("DEMO1").innerHTML=s4;
+}
+
+function myFunction2()
+{
+var s=document.getElementById("phrase").value;
+var s1=s.split(" ");
+var i=0;
+var len=s1.length;
+var s4="";
+ for (;i<len;)
+ { 
+   var len1=s1[i].length;
+   var s2=s1[i].substring(0,1);
+   var s5=s2.toLowerCase();
+   if(s5=="a")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s1[i]+"yay";
+     i++;
+   }
+   else if(s5=="e")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+      s4=s4+" "+s1[i]+"yay";
+     i++;
+   }
+   else if(s5=="i")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+      s4=s4+" "+s1[i]+"yay";
+     i++;
+   }
+   else if(s5=="o")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+      s4=s4+" "+s1[i]+"yay";
+     i++;
+   }
+   else if(s5=="u")
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+      s4=s4+" "+s1[i]+"yay";
+     i++;
+   }
+  else
+   {
+     var s3=s1[i].substring(1,len1.valueOf());
+     s4=s4+" "+s3+s5+"way";
+     i++;
+   }
+ }
+s4=s4+".";
+document.getElementById("DEMO2").innerHTML=s4;
+}
+</script>
+</body>
+</html>

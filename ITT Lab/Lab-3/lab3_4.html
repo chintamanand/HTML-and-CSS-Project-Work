@@ -1,0 +1,106 @@
+<html>
+<title>
+</title>
+<head>
+</head>
+<body >
+<center>
+<h2 style="color:Brown">ENTER WORD CONTAINING 5 CHARACTERS</h2>
+<br/>
+<input type="text" id="word" size="30" maxlength="5" style="font-size:20"></input><br/>
+<br/>
+<input type="button" onclick="myFunction1()" name="b1" value="GET ALL 3 CHAR WORDS"></input><br/>
+<br/>
+<h3 style="color:green">All Possible Three Character Words are:</h3>
+</br>
+<textarea id="area1" rows="8" cols="40" style="font-size:15" disabled></textarea><br/>
+<br/>
+<input type="button" onclick="myFunction2()" name="b2" value="CLEAR"></input><br/>
+</center>
+<script type="text/javascript">
+function myFunction1()
+{
+ var str=document.getElementById("word").value;
+ var len=str.length;
+ var i=0;
+ var j=0;
+ var k=0;
+ var str1="";
+ for(;i<len;)
+ {   
+  j=i+1;
+  k=i+2;
+  
+  if(k==len)
+  {
+  k=0;
+  } 
+  else if(k>len)
+  {
+   k=1;
+  }
+  
+  if(j>=len)
+  {
+  j=0;
+  }
+
+  while(k!=i)
+  { 
+   str1=str1+str[i]+str[j]+str[k]+" ";
+   j++;
+   k++;
+    if(k==len)
+    {
+     k=0;
+    }
+    else if(j==len)
+    {
+     j=0;
+    }
+   }
+  i++;  
+ }
+var str2=str1.split(" ");
+var len1=str2.length;
+var m=0;
+var n=1;
+var set=0;
+var str3="";
+for(;m<len1;)
+{
+ for(;n<len1;)
+ {
+   if(str2[m]==str2[n])
+   { 
+    str2.shift();
+    len1=str2.length;
+    set=1;
+    break;
+   }
+  n++;
+ }
+  if(set==0)
+  {
+   str3=str3+str2[m]+" "; 
+   str2.shift();
+   len1=str2.length;
+   n=1;
+  }
+  else
+  {
+   set=0;
+   n=1;
+  } 
+}
+document.getElementById("area1").innerHTML=str3;
+}
+
+function myFunction2()
+{
+document.getElementById("area1").innerHTML="";
+document.getElementById("word").value="";
+}
+</script>
+</body>
+</html>

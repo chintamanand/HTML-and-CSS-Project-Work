@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+<script type="text/javascript">
+var i=50;
+var j=5;
+var a=window.setInterval(myFun1,100);
+document.getElementById("demo").innerHTML="Anand";
+document.getElementById("demo").style.color="red";
+
+function myFun1()
+{
+j+=1;
+var par=j+"pt";
+document.getElementById("demo").style.fontSize=par;
+  if(j==50)
+  {
+   window.clearInterval(a);
+   document.getElementById("demo").style.color="blue";
+   i=50;
+  var b=window.setInterval(myFun2,100);
+  }
+}
+function myFun2()
+{
+i-=1;
+var par1=i+"pt";
+document.getElementById("demo").style.fontSize=par1;
+  if(i==5)
+  {
+   window.clearInterval(b);
+   document.getElementById("demo").style.color="red";
+   j=5;
+   var a=window.setInterval(myFun2,100);  
+  }
+}
+</script>
+</body>
+</html>
