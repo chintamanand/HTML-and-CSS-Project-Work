@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 4 Q3</title>
+	<style type="text/css">
+		p {height: 50px; overflow: auto;}
+		p:first-child {height: auto;}
+	</style>
+</head>
+<body>
+<div id="wrapper">
+	<p onclick="promote(1)" id="p1">
+	Text 1<br>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<p onclick="promote(2)" id="p2">
+	Text 2<br>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<p onclick="promote(3)" id="p3">
+	Text 3<br>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</div>
+	<script type="text/javascript">
+		var wrapper=document.getElementById("wrapper");
+		var pos=[1,2,3];
+		function promote(element)
+		{
+			if(element==1)
+				pos=[1,2,3];
+			else if(element==2)
+				pos=[2,1,3];
+			else
+				pos=[3,1,2];
+			console.log(pos);
+			reorder();
+
+		}
+		function reorder()
+		{
+			for(var i=0; i<pos.length; i++)
+			{
+				var para=document.getElementById('p'+pos[i]);
+				para.style.height='50px';
+				wrapper.appendChild(para);
+			}
+			wrapper.firstElementChild.style.height='auto';
+		}
+	</script>
+</body>
+</html>

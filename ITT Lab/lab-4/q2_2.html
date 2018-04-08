@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title></title>
+
+<script>
+
+function gets()
+{
+var limit = document.getElementById("limit").value;
+reverse(limit);
+}
+function reverse(limit)
+{
+var revers=0;
+limit = Number(limit);
+ while (limit != 0)
+   {
+      revers = revers * 10;
+      revers = revers+ limit%10;
+      limit = Math.floor(limit/10);
+   }
+alert("Reversed number is"+revers);
+
+}
+</script>
+
+</head>
+<body>
+<h3>Enter the number:</h3>
+<input type="text" id="limit" />
+<button onclick="gets()" >Print </button>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fibonacci series</title>
+<script>
+function getFibonacci()
+{
+ //get the limit from textbox
+ var limit = document.getElementById("limit").value;
+ //call the fibonacci function
+ fibonacciSeries(limit);
+}
+
+function fibonacciSeries(limit)
+{ 
+ var first_num = 0, second_num = 1, next_num, outputElement;
+  if(limit != '')
+   {
+    outputElement = document.getElementById("output"); 
+    outputElement.innerHTML = "";
+    outputElement.innerHTML = "<br>";
+    alert(first_num);
+    outputElement.innerHTML += first_num + "<br>";
+    alert(second_num);
+    outputElement.innerHTML += second_num + "<br>";
+    /* here we are checking > 2 because we have already printed two numbers  of fiboncacci series above*/
+    //loop through the limit till it becomes 0 (zero)
+     while(limit > 2)
+       {       
+     //add the first value and second to get the next value
+       next_num   = first_num + second_num;
+	//assign second value to first
+       //next value to second
+      //to find the next series
+       first_num  = second_num;
+       second_num = next_num;
+	 //print the next value
+       alert(next_num);
+       outputElement.innerHTML += next_num + "<br>";
+          //decrement the limit by one 
+       limit--;
+      }
+     } 
+      else{
+	   document.getElementById("output").innerHTML = "Please enter a value!";
+	    }
+	}
+</script>
+</head>
+<body>
+<h2>Fibonacci series </h2>
+<h3>Enter the limit:</h3>
+<input type="text" id="limit" />
+<button onclick="getFibonacci()" >Print Fibonacci Series</button>
+<h4>Output: <span id="output"></span></h4>
+</body>
+</html>

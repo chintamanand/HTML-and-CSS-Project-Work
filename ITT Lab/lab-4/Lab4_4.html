@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript">
+function match()
+{
+var usn,sem,s1,s2;
+usn=document.getElementById("USN").value;
+sem=document.getElementById("SEM").value;
+s1=usn.search(/^[1-4][A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{3}$/);
+if(s1>=0)
+alert("This is a valid Usn number");
+else
+alert("This is not a valid Usn number");
+s2=sem.search(/^[1-8]$/);
+if(s2>=0)
+alert("This is a valid semester");
+else
+alert("This is not a valid semester.It must be a number between 1 and 8");
+}
+</script>
+</head>
+<body>
+<form name="getusn" action="">
+<p>USN:<input type="text" id="USN" /> </p>
+<p>semester:<input type="text" id="SEM" /> </p>
+<p><input type="submit" value="click" onclick="match();" /> </p>
+</form>
+</body>
+</html>
