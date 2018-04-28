@@ -1,0 +1,26 @@
+Name {
+    background-color: #ffffff;
+    width: 100%;
+    font-size: 20pt;
+}
+USN {
+    display: block;
+    margin-left: 0;
+}
+CollegeName {
+    display: block;
+    color: #ff0000;
+    font-size: 15pt;
+    margin-left: 10pt;
+}
+Branch {
+    display: block;
+    color: #0000ff;
+    font-size: 15pt;
+    margin-left: 10pt;
+}
+YearOfJoining, Email,USN {
+    display: block;
+    color: #000000;
+    margin-left: 10pt;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab5_1.xsl"?>
+<students>
+<student>
+	<Name>Chintam anand</Name>
+	<USN>140911308</USN>
+	<CollegeName>MIT</CollegeName>
+	<Branch>IT</Branch>
+	<YearOfJoining>2015</YearOfJoining>
+	<Email>Chintamanand56@gmail.com</Email>
+</student>
+</students>

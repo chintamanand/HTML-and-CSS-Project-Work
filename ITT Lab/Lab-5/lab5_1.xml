@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab5_2.xsl"?>
+<students>
+<student>
+	<Name>Chintam anand</Name>
+	<USN>140911308</USN>
+	<CollegeName>MIT</CollegeName>
+	<Branch>IT</Branch>
+	<YearOfJoining>2015</YearOfJoining>
+	<Email>Chintamanand56@gmail.com</Email>
+</student>
+
+<student>
+	
+	<Name>Chintam kiran</Name>
+	<USN>140911410</USN>
+	<CollegeName>VIT</CollegeName>
+	<Branch>CSE</Branch>
+	<YearOfJoining>2012</YearOfJoining>
+	<Email>Chintamkiran24@gmail.com</Email>
+</student>
+<student> 
+        <Name>Suresh</Name>
+	<USN>140911330</USN>
+	<CollegeName>IIT</CollegeName>
+	<Branch>MBA</Branch>
+	<YearOfJoining>2010</YearOfJoining>
+	<Email>Chintamsuresh28@gmail.com</Email>
+
+</student>
+</students>
