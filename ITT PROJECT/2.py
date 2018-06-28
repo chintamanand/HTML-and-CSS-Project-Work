@@ -18,3 +18,5 @@ else:
      print("Location:http://localhost/login.html\r\n")
      print("Content-type:text/html\r\n\r\n")
      
+     
+     
