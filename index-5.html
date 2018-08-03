@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Using the CDN (content Delivery Network)is used to install the jQuery --!>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+ $(document).ready(function(){ 
+   //This will only hides the 1st Element.
+   $("p:first").hide();
+   //$("p").hide();
+  $(".c1").hide();
+  $("#i1").hide();
+  //even row Number will be Chaged to Yellow
+  $("tr:even").css("background-color", "yellow");
+  //Odd Row number will be Changed to Red;
+   $("tr:odd").css("background-color", "red");
+  
+  //This will hide the even Row Number 
+   //$("tr:odd").hide();
+
+  $("#p1").css("color","Green");
+ //THis code will hide all the Buttons
+ $(":button").hide();
+
+ <!--attr() will Give the value as a Result--!>
+ var x=$("em").attr("title");
+ $("#d12").text(x);
+ 
+});
+
+</script>
+
+</head>
+
+<body>
+
+<em title="Bold and Brave">This Emphasied Paragraph</em>
+<div id="d12"></div>
+
+
+<p>This Statement will Removed</p>
+<p>1st Statment </p>
+<p id="p1">2nd Statment Both Elements will be Shown</p>
+
+
+<p class="c1">3rd Statment will be Hidden</p>
+<p class="c2">4th Statement won't be Hidden</p>
+
+
+<p id="i1">5th Statement will be Hidden</p>
+<p id="i2">6th Statement won't be Hidden</p>
+
+<button type="submit" id="b1">ok</button>
+
+<table border="1">
+  <tr>
+    <th>Company</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>UK</td>
+  </tr>
+</table>
+</body>
+
+</html>
