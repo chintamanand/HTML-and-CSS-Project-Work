@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample Program</title>
+<!--Internal CSS Decalration --!>
+<style>
+ .selected{
+   background-color:red;
+  }
+  .highlight{
+   background-color:yellow;
+   color:black;
+   font-family:verdana;
+  }
+  .red { color:red; }
+  .green { color:green; }
+</style>
+
+<!--Using the CDN (content Delivery Network)is used to install the jQuery --!>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--Applying class to HTML elements --!>
+<script type="text/javascript">
+ $(document).ready(function(){
+
+  //here we are Adding the CSS classes
+  $("p").addClass("highlight");
+  $("#d1").addClass("selected");
+
+  //Here we are Removing the Class that Specified in HTML elements
+  $("h1d2").removeClass("green"); 
+ });
+
+</script>
+</head>
+<body>
+<p title="simple Text">Hi World</p>
+<div id="d1">Heading-1</div>
+
+
+<h1 id="h1d2" class= "green" >This red colured Heading</h1>
+
+</body>
+</html>
